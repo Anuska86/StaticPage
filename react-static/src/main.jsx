@@ -3,8 +3,15 @@ const root = createRoot(document.getElementById("root"));
 
 function Header() {
   return (
-    <header>
-      <img src="src/imgs/react-logo.png" width="80px" alt="React logo" />
+    <header className="header">
+      <img className="logo" src="src/imgs/react-logo.png" alt="React logo" />
+      <nav>
+        <ul className="nav-list">
+          <li className="li-hor"> Pricing </li>
+          <li className="li-hor"> About </li>
+          <li className="li-hor"> Contact </li>
+        </ul>
+      </nav>
     </header>
   );
 }
@@ -22,13 +29,12 @@ function MainContent() {
   );
 }
 
-function Footer()
-{
+function Footer() {
   return (
-    <footer>
-        <small>© 2024 Ana Sappia Rey development. All rights reserved.</small>
-      </footer>
-  )
+    <footer className="footer">
+      <small className="footer-small">© 2024 Ana Sappia Rey development. All rights reserved.</small>
+    </footer>
+  );
 }
 
 function Page() {
@@ -36,7 +42,7 @@ function Page() {
     <>
       <Header />
       <MainContent />
-      <Footer/>
+      <Footer />
     </>
   );
 }
